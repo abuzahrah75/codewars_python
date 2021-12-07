@@ -1,7 +1,18 @@
+from typing import List
+
+
 def same_structure_as(original, other):
     # try to compare each element recursively
+    # compare length (len) between original & other
+    if len(original) != len(other):
+        return False
+    for ix in original:
+        if isinstance(ix, List):
+            retstr = f'{ix} adalah list / array'
+        else:
+            retstr = f'{ix} bukan lah list / array'
 
-    return True
+    return retstr
 
 
 # should return True
